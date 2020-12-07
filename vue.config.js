@@ -1,3 +1,4 @@
+const Dotenv = require("dotenv-webpack")
 module.exports = {
   devServer: {
     proxy: {
@@ -8,4 +9,11 @@ module.exports = {
       },
     },
   },
-}
+   configureWebpack: {
+       plugins: [
+           new Dotenv({
+             systemvars: true
+           })
+       ]
+          }
+};
