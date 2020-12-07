@@ -5,7 +5,7 @@ import {securedAxiosInstance, plainAxiosInstance } from './assets/backend/axios'
 import * as VueGoogleMaps from 'vue2-google-maps'
 // import {KEY} from '.././fakeENV.js'
 
-
+console.log("hesteeeeeee", process.env.GOOGLE_MAPS_KEY)
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, {
@@ -14,7 +14,7 @@ Vue.use(VueAxios, {
 });
 Vue.use(VueGoogleMaps, {
   load: {
-    key: process.env.key,
+    key: process.env.GOOGLE_MAPS_KEY,
  
   },
 
