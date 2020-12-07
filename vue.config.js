@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://cryptic-savannah-08889.herokuapp.com/',
         ws: true,
         changeOrigin: true,
       },

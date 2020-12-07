@@ -10,7 +10,7 @@
               v-bind:key="tree.id"
               v-for="(tree, index) in trees"
               v-bind:value="index"
-            >{{tree.common_name}} {{tree.botanical_name}} ttl: {{tree.total}}</option>
+            >{{tree.common_name}} {{tree.botanical_name}}</option>
           </select>
         </div>
         <div v-else-if="this.search === 'locations' ">
