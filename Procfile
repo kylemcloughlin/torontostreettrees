@@ -1,1 +1,1 @@
-web: script: npm run build
+web:npm run build
