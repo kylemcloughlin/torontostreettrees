@@ -152,9 +152,15 @@ export default {
       if (this.search === "types" || this.search === "diameters") {
         this.$http.plain
           .get(`/${this.search}`)
-          .then(response => (this.trees = response.data))
+          .then((response) => {
+            this.trees = response.data;
+            this.$emit('isLoaded', false )
+            })
           .catch(err => console.log(":(", err));
-      }
+      } 
+      // else {
+      //       this.$emit('isLoaded', true )
+      // }
     },
     plus() {
       this.numOutput++;

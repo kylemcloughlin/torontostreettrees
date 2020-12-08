@@ -12,7 +12,11 @@
         </div>
       </VueSlideUpDown>
     </div>
-    <div v-show="formShow">
+      <VueSlideUpDown :active="this.loaded" :duration="500">
+        <Loader/>
+      </VueSlideUpDown> 
+    
+    <div  v-if="formShow" v-bind:class="this.loadingHelper ? 'isLoaded' : '' ">
       <div class="form-holder">
         <div class="button-bar">
           <Species v-bind:msg="this.msg" v-on:setSearch="setSearch" />
@@ -23,10 +27,12 @@
           v-bind:search="this.baseSearch"
           msg="location"
           v-on:setTrees="setTrees"
+          v-on:isLoaded="isLoaded"
           v-on:outputError="outputError"
         />
       </div>
     </div>
+
     <div class="output-holder" v-show="formShow === false">
       <Map
         v-bind:markerTrees="this.searchedTrees"
@@ -55,6 +61,7 @@ import Species from "./components/species";
 import Map from "./components/map";
 import InfoPanel from "./components/infoPanel";
 import VueSlideUpDown from "vue-slide-up-down";
+import Loader from './components/loader';
 export default {
   name: "App",
   components: {
@@ -65,7 +72,8 @@ export default {
     Species,
     Map,
     InfoPanel,
-    VueSlideUpDown
+    VueSlideUpDown,
+    Loader
   },
   methods: {
     outputError(x) {
@@ -92,6 +100,16 @@ export default {
         this.baseSearch = x;
         this.msg = x;
       }
+    },
+    isLoaded(x){
+   
+  if(this.loadingHelper === true && this.loaded === true) {
+    this.loaded = x;
+  return  setTimeout(() => {
+   this.loadingHelper = false;
+ }, );
+
+  }
     },
     setTrees(x) {
       this.searchedTrees = x.data;
@@ -122,7 +140,9 @@ export default {
       errorMes: "",
       error: false,
       total: null,
-      postID: 0
+      postID: 0,
+      loaded: true,
+      loadingHelper: true
     };
   }
 };
@@ -142,6 +162,9 @@ body {
   color: #292f36;
   margin: 0;
   padding: 0;
+}
+.isLoaded {
+visibility: hidden;
 }
 .form-holder {
   width: 100%;
