@@ -291,6 +291,8 @@ visibility: hidden;
   .title-holder {
     width: 100% !important;
     max-width: 70em !important;
+    height: 14.4em !important;;
+    max-height: 15em !important;
   }
   .vue-map-container {
     width: 880px !important;
@@ -359,7 +361,7 @@ visibility: hidden;
     width: 1.2em !important;
   }
   .diameter-title {
-    margin-left: 2em !important;
+    margin-left: 0em !important;
   }
   .plus {
     right: 4em !important;

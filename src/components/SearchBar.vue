@@ -4,9 +4,9 @@
     <form @submit="searchTree">
       <div id="search-holder">
         <div class="type-select-holder" v-if="this.search ===  'types'">
-          <h3>Search By Speices:</h3>
+          <h3>Search By Species:</h3>
           <select class="type-select"    v-model="output">
-             <option value="" disabled selected>Select your option</option>
+             <option value="" disabled selected>Select your Species </option>
             <option
               v-bind:key="tree.id"
               v-for="(tree, index) in trees"
@@ -39,8 +39,8 @@
         <div v-else>
           <h3 class="diameter-title">Search By Diameter at Breast height:</h3>
 
-          <label class="diameter-label" id="label">
             <input class="diameter-input" type="number" v-model="numOutput" />
+          <label class="diameter-label" id="label">
             inches
           </label>
 
@@ -256,9 +256,9 @@ export default {
   margin-left: 9em;
 }
 .diameter-label {
-  position: absolute;
+  position: relative;
 
-  top: 2em;
+  /* top: 2em; */
 }
 #label {
   font-size: 24px;
@@ -269,9 +269,9 @@ export default {
    -moz-appearance: textfield;
   background-color: transparent;
   text-align: right;
-  font-size: 3em;
+  font-size: 3.5em;
   width: 3em;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .diameter-input:focus {
   appearance: none;
