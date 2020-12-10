@@ -149,6 +149,27 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'roboto';
+  src: url(assets/fonts/Roboto-Medium.ttf),
+   url(assets/fonts/Roboto-Medium.ttf)  format('truetype');/* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 300
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(assets/fonts/Roboto-Medium.ttf),
+   url(assets/fonts/Roboto-Medium.ttf)  format('truetype');
+  font-style: normal;
+  font-weight: 300
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url(assets/fonts/PTSans-Regular.ttf),
+   url(assets/fonts/PTSans-Regular.ttf)  format('truetype');
+  font-style: normal;
+  font-weight: 300
+}
 body {
   margin: 0;
   padding: 0;
