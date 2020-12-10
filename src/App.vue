@@ -238,7 +238,7 @@ visibility: hidden;
   background-color: #999;
   border-radius: 2em;
   margin-left: 2em;
-  height: 3em;
+  height: 40px;
   opacity: 0.6;
   transition: 0.2s;
   width: 100%;
@@ -385,6 +385,16 @@ visibility: hidden;
   .suggestion-container {
     left: 1.7em !important;
   }
+.sub-title {
+  width: 100% !important;
+  text-align: center;
+}
+ .location-input {
+    width: 91% !important;
+  }
+.location-select-holder {
+    width: 91% !important;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -428,15 +438,18 @@ visibility: hidden;
   .btn-helper {
     width: 42%;
   }
-
+  .location-input {
+    width: 91% !important;
+  }
+.location-select-holder {
+    width: 91% !important;
+  }
   .vue-map-container {
     width: 350px !important;
   }
   .location-select-holder {
-    margin-left: 0.5em !important;
+    /* margin-left: 0.5em !important; */
   }
-  .location-input {
-    min-width: 3em !important;
-  }
+ 
 }
 </style>

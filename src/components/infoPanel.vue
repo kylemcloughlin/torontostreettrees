@@ -5,7 +5,7 @@
         v-if="this.searched === 'diameters'"
       >Diameter's of {{this.outputTrees[0].dbh_trunk}} inches</h1>
       <h1 v-else-if="this.searched === 'locations'">{{this.outputTrees[0].name}}</h1>
-      <h1 class="info-title" v-else>Spieces: {{this.outputTrees[0].common_name}}</h1>
+      <h1 class="info-title" v-else>Species: {{this.outputTrees[0].common_name}}</h1>
       <h2>Results: {{this.total}} Trees Found</h2>
     </div>
     <div>

@@ -5,7 +5,8 @@
       <div id="search-holder">
         <div class="type-select-holder" v-if="this.search ===  'types'">
           <h3>Search By Speices:</h3>
-          <select class="type-select" v-model="output">
+          <select class="type-select"    v-model="output">
+             <option value="" disabled selected>Select your option</option>
             <option
               v-bind:key="tree.id"
               v-for="(tree, index) in trees"
@@ -265,6 +266,7 @@ export default {
 }
 .diameter-input {
   border: none;
+   -moz-appearance: textfield;
   background-color: transparent;
   text-align: right;
   font-size: 3em;
@@ -273,6 +275,8 @@ export default {
 }
 .diameter-input:focus {
   appearance: none;
+   -moz-appearance: textfield;
+
   outline: none;
   color: #157a6e;
   opacity: 1;
@@ -344,6 +348,9 @@ export default {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 0.2em;
+   appearance: none;
+    -moz-appearance: none;
+-webkit-appearance: none;
 }
 .type-select:focus {
   outline: none;
@@ -351,7 +358,7 @@ export default {
 #submit {
   position: absolute;
   right: 1em;
-  top: 14.4em;
+  bottom: 1em;
   height: 2.3em;
   width: 6em;
   border-radius: 0.5em;
