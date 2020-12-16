@@ -150,25 +150,25 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'roboto';
+  font-family: 'Roboto';
   src: url(assets/fonts/Roboto-Medium.ttf),
    url(assets/fonts/Roboto-Medium.ttf)  format('truetype');/* Safari, Android, iOS */
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
 }
 @font-face {
-  font-family: 'roboto';
+  font-family: 'Roboto';
   src: url(assets/fonts/Roboto-Medium.ttf),
    url(assets/fonts/Roboto-Medium.ttf)  format('truetype');
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
 }
 @font-face {
   font-family: 'PT Sans';
   src: url(assets/fonts/PTSans-Regular.ttf),
    url(assets/fonts/PTSans-Regular.ttf)  format('truetype');
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
 }
 body {
   margin: 0;
